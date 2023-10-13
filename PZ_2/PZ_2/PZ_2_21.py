@@ -1,0 +1,20 @@
+# обработка исключений
+while True:
+    try:
+        number = int(input("введите трёхзначное число: "))  # ввод данных
+    except ValueError:
+        print("что-то пошло не так")
+        continue
+    break
+
+# Получение цифр сотен, десятков и единиц
+hundreds = number // 100
+tens = (number // 10) % 10
+units = number % 10
+
+# Перестановка цифр десятков и единиц
+new_number = hundreds * 100 + units * 10 + tens
+
+# Вывод результата
+print("Число после перестановки цифр десятков и единиц:", new_number)
+print("Программа успешно завершена")
